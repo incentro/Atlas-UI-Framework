@@ -1,0 +1,18 @@
+.mx-window {
+  border-radius: 4px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  height: auto !important;
+  // position: absolute;
+  overflow: auto;
+  // top: calc( 50% + (80px / 2) ) !important; //calc top minus header height
+  top: 50% !important;
+  transform: translateY(-50%);
+
+  .modal-body.mx-window-body {
+    height: auto !important;
+    max-height: calc(80vh - 50px);
+    overflow-y: auto;
+  }
+
+  .mx-resizer {display: none;}
+}
