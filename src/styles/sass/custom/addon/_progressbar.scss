@@ -10,7 +10,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  
+
   .mx-progress-indicator {
     background-image: url('../../../images/circlebar-loader.svg');
     background-position: center;
@@ -19,15 +19,18 @@
     width: 160px;
   }
 
-  .mx-progress-message {
-    display: block;
-    margin: 10px 0 0 0;
+  &.mx-progress-empty {
+    .mx-progress-message::before {
+      content: 'Gegevens ophalen...';
+      margin: 0;
+    }
   }
-  .mx-progress-message::before {
-    content: 'Gegevens ophalen...';
+
+  .mx-progress-message {
     color: black;
+    display: block;
     font-weight: bold;
-    margin: 0;
     opacity: 0.42;
+    margin: 10px 0 0 0;
   }
 }
