@@ -1,0 +1,33 @@
+.mx-progress {
+  background-color: $brand-inverse;
+  border-radius: 8px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column-reverse;
+  left: 50%;
+  padding: 20px 40px;
+  right: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  
+  .mx-progress-indicator {
+    background-image: url('../../../images/circlebar-loader.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 160px;
+  }
+
+  .mx-progress-message {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+  .mx-progress-message::before {
+    content: 'Gegevens ophalen...';
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    opacity: 0.42;
+  }
+}
