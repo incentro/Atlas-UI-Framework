@@ -10,6 +10,19 @@
     #{$identifier}#{$i} {
       animation: $animation .2s forwards;
       animation-delay: $delay + 42ms * $i;
+      opacity: 0;
+    }
+  }
+}
+
+
+// delay for items, count with :nth-child
+@mixin animation-delay-children($identifier, $total_number_items: 10, $animation: slideIn, $delay: 0) {
+  @for $i from 0 to $total_number_items + 1 {
+    #{$identifier}:nth-child(#{$i}) {
+      animation: $animation .2s forwards;
+      animation-delay: $delay + 42ms * $i;
+      opacity: 0;
     }
   }
 }
